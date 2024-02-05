@@ -9,6 +9,7 @@
                 3 - Container Section.
                   4 - Form Fields.
                     5 - Login Social Icons.
+                      6 - Media Query.
 */
 /*---------------------------------------------------------------------------------------*/
 /*============================================== Reset All Element Style ================================================*/
@@ -67,7 +68,7 @@ main.container {
   flex: 1;
   max-width: 300px;
   padding: 10px;
-  min-height: 80%;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -138,6 +139,7 @@ form input[type="email"] {
 form input[type="submit"] {
   color: var(--light-color);
   font-size: 22px;
+  font-family: sans-serif;
   border-radius: 6px;
   padding: 10px 30px;
   cursor: pointer;
@@ -254,6 +256,44 @@ form .user__Email i {
   color: var(--light-color);
   transform: scale(1.05) translate(-5px);
   border: 3px solid var(--light-color);
+}
+
+/*=======================================================================================================================*/
+/*============================================== Media Query ========================================================*/
+
+@media (max-width: 600px) {
+  .login__form {
+    min-height: 90vh;
+  }
+
+  .login__form h1 {
+    margin: 3rem auto;
+  }
+
+  form input {
+    margin: 20px auto;
+  }
+
+  form input[type="password"],
+  form input[type="text"] {
+    padding: 15px 30px 15px 10px;
+  }
+
+  form input[type="email"] {
+    padding: 15px 10px 15px 35px;
+  }
+
+  form input[type="submit"] {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: .8px;
+    border-radius: 10px;
+    padding: 15px 38px;
+  }
+
+  .login__social--icon {
+    margin-top: 2.4rem;
+  }
 }
 
 /*=======================================================================================================================*/
