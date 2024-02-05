@@ -1,0 +1,259 @@
+/*--------------------------------------------------------------------------------*/
+/*
+  
+  * This is the style sheet for the HTML document written in HTML5.
+  * It contains selectors, properties and values which are used to control the layout and appearance of web page.
+          content of Style file:-
+            1 - Reset All Element Style.
+              2 - Define colors .
+                3 - Container Section.
+                  4 - Form Fields.
+                    5 - Login Social Icons.
+*/
+/*---------------------------------------------------------------------------------------*/
+/*============================================== Reset All Element Style ================================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*=======================================================================================================================*/
+/*============================================== Reset All Element Style ================================================*/
+:root {
+  --light-color: rgb(255, 255, 255);
+  --layer-color: rgba(0, 5, 24, 0.709);
+  --layer2-color: rgba(4, 10, 32, 0.3);
+  --border1-color: rgb(91, 4, 4);
+  --border2-color: rgb(91, 4, 4);
+  --linked-color: rgb(29, 98, 201);
+  --twit-color: rgb(106, 161, 244);
+  --whats-color: rgb(15, 252, 114);
+  --black-color: rgb(17, 13, 13);
+  --inst-color: rgb(184, 13, 90);
+  --gray-color: rgb(128, 128, 128);
+  --golden-color: rgb(173, 179, 2);
+
+
+
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+
+}
+
+/*=======================================================================================================================*/
+/* =============================================== Container Section ================================================== */
+main.container {
+  background-image: url(../images/bg11.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container__layer {
+  background-color: var(--layer-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.login__form {
+  flex: 1;
+  max-width: 300px;
+  padding: 10px;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--layer2-color);
+  border: 2.25px solid;
+  border-image: linear-gradient(to bottom, var(--border1-color), var(--border2-color), var(--border1-color), var(--border2-color), var(--border1-color)) 1;
+}
+
+.login__form h1 {
+  color: var(--light-color);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-family: monospace;
+  margin: 50px auto;
+  position: relative;
+}
+
+h1::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  top: 120%;
+  content: "";
+  height: 2px;
+  width: 50px;
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to right, var(--border1-color), var(--border2-color), var(--border1-color),
+      var(--border2-color));
+}
+
+h1:hover::before {
+  width: 160%;
+}
+
+/*=======================================================================================================================*/
+/*=============================================== Form  Fields =========================================================*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  all: unset;
+  margin: 10px auto;
+  border: 1px solid var(--border1-color);
+  color: var(--light-color);
+  border-radius: 3px;
+  text-transform: capitalize;
+  overflow-x: hidden;
+}
+
+form input[type="password"],
+form input[type="text"] {
+  padding: 10px 30px 10px 10px;
+}
+
+form input[type="email"] {
+  padding: 10px 10px 10px 30px;
+}
+
+form input[type="submit"] {
+  color: var(--light-color);
+  font-size: 22px;
+  border-radius: 6px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+form input::placeholder {
+  font-style: italic;
+  color: var(--gray-color);
+}
+
+form input:focus {
+  border: .8px solid var(--golden-color);
+}
+
+form input[type="password"]::-ms-reveal,
+form input[type="password"]::-ms-clear,
+form input[type="password"]::-webkit-inner-spin-button,
+form input[type="password"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+form a {
+  margin: -5px auto 10px auto;
+  width: 100%;
+  text-align: right;
+  color: rgb(178, 127, 127);
+}
+
+form>div i.bx {
+  color: var(--light-color);
+  font-size: 24px;
+  position: absolute;
+}
+
+form .user__pass,
+form .user__Email {
+  position: relative;
+}
+
+form .user__pass i,
+form .user__Email i {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+form .user__pass i {
+  right: 5px;
+  cursor: pointer;
+}
+
+form .user__Email i {
+  left: 5px;
+}
+
+/*=======================================================================================================================*/
+/*====================================================Login Social Icons=================================================*/
+
+.login__social--icon a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 3px solid;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: all .3s ease-in-out;
+}
+
+.login__social--icon a:first-child {
+  color: var(--linked-color);
+  border-color: var(--linked-color);
+}
+
+.login__social--icon a:nth-child(2) {
+  color: var(--inst-color);
+  border-color: var(--inst-color);
+}
+
+.login__social--icon a:nth-child(3) {
+  color: var(--twit-color);
+  border-color: var(--twit-color);
+}
+
+.login__social--icon a:nth-child(4) {
+  color: var(--whats-color);
+  border-color: var(--whats-color);
+}
+
+.login__social--icon a:first-child:hover {
+  box-shadow: 0 0 9px var(--linked-color);
+  background-color: var(--linked-color);
+}
+
+.login__social--icon a:nth-child(2):hover {
+  box-shadow: 0 0 9px var(--inst-color);
+  background-color: var(--inst-color);
+}
+
+.login__social--icon a:nth-child(3):hover {
+  box-shadow: 0 0 9px var(--twit-color);
+  background-color: var(--twit-color);
+}
+
+.login__social--icon a:nth-child(4):hover {
+  box-shadow: 0 0 9px var(--whats-color);
+  background-color: var(--whats-color);
+}
+
+.login__social--icon a:hover {
+  color: var(--light-color);
+  transform: scale(1.05) translate(-5px);
+  border: 3px solid var(--light-color);
+}
+
+/*=======================================================================================================================*/

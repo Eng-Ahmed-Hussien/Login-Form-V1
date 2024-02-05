@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form V1</title>
+    <meta name="description" content="My 8th Task in GDSC ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ahmed Hussien">
+    <meta name="keywords" content="..............">
+    <meta http-equiv="refresh" content="30">
+    <meta property="og:title" content="..............." />
+    <meta property="og:description" content="................................." />
+    <meta property="og:image" content="https://........." />
+    <meta property="og:url" content="https://........." />
+    <link rel="stylesheet" href="./assets/Css/style.css">
+    <link rel="shortcut icon" href="./assets/images/gdsc.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+
+    <main class="container">
+      <div class="container__layer">
+        <div class="login__form">
+          <h1>login</h1>
+          <form action="#" method="get">
+            <div class="user__Email">
+              <input type="email" name="email" id="email" placeholder="enter userName...">
+              <i class='bx bxs-user'></i>
+            </div>
+            <div class="user__pass">
+              <input type="password" name="password" id="password" placeholder="enter password...">
+              <i class='bx bx-low-vision'></i>
+            </div>
+            <a href="">forgot password?</a>
+            <input type="submit" value="sing in">
+          </form>
+          <div class="login__social--icon">
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <script>
+      var passwordInput = document.querySelector(".user__pass input");
+      var togglePasswordIcon = document.querySelector(".user__pass i");
+      togglePasswordIcon.addEventListener('click', function () {
+        var type = passwordInput.type === 'password' ? 'text' : 'password';
+        passwordInput.type = type;
+        var iconClass = type === 'password' ? 'bx-low-vision' : 'bx-show';
+        togglePasswordIcon.className = 'bx ' + iconClass;
+      });
+    </script>
+  </body>
+
+</html>
